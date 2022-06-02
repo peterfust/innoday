@@ -24,7 +24,7 @@ let httpsServer = https.createServer({
     cert: fs.readFileSync(path.join(__dirname, './pem/Dynamsoft-WebTwain-cert.pem'))
 }, app);
 
-let httpsPort = 4443, url='https://127.0.0.1:'+httpsPort+'/HelloWorld.html';
+let httpsPort = process.env.PORT || 4443, url='https://127.0.0.1:'+httpsPort+'/HelloWorld.html';
 
 setTimeout(function(){
   opn(url);
