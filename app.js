@@ -19,16 +19,21 @@ app.use(cors({
 app.use(express.static(path.join(__dirname, './')));
 app.use('/dist',express.static(path.join(__dirname, './dist')));
 
-let httpsServer = https.createServer({
+/*let httpsServer = https.createServer({
     key: fs.readFileSync(path.join(__dirname, './pem/Dynamsoft-WebTwain-key.pem')),
     cert: fs.readFileSync(path.join(__dirname, './pem/Dynamsoft-WebTwain-cert.pem'))
-}, app);
+}, app);*/
 
-let httpsPort = process.env.PORT || 4443, url='https://127.0.0.1:'+httpsPort+'/HelloWorld.html';
+let port = process.env.PORT || 4443;
+/*let url='https://127.0.0.1:'+port+'/HelloWorld.html';
 
 setTimeout(function(){
   opn(url);
 },500);
 
-httpsServer.listen(httpsPort, () => console.log(`Page is available in ${url}`));
+httpsServer.listen(httpsPort, () => console.log(`Page is available in ${url}`));*/
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+  })
 
