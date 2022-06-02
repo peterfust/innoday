@@ -30,5 +30,5 @@ setTimeout(function(){
   opn(url);
 },500);
 
-httpsServer.listen(httpsPort, '127.0.0.1', () => console.log(`Page is available in ${url}`));
+httpsServer.listen(httpsPort, () => console.log(`Page is available in ${url}`));
 
