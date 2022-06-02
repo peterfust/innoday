@@ -17,7 +17,7 @@ app.use(cors({
 
 // static files
 app.use(express.static(path.join(__dirname, './')));
-app.use('/dist',express.static(path.join(__dirname, '../../dist')));
+app.use('/dist',express.static(path.join(__dirname, './dist')));
 
 let httpsServer = https.createServer({
     key: fs.readFileSync(path.join(__dirname, './pem/Dynamsoft-WebTwain-key.pem')),

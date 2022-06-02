@@ -15,7 +15,6 @@
         "open": "^8.4.0"
     },
     "scripts": {
-        "sample": "node app.js",
         "start": "node app.js"
     }
 }
